@@ -6,7 +6,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.smartcampus</groupId>
-    <artifactId>smart-campus-api</artifactId>
+    <artifactId>SmartCampusAPI</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
@@ -16,25 +16,30 @@
     </properties>
 
     <dependencies>
-        <!-- Jersey Servlet -->
+        <!-- Jersey Servlet - uses javax not jakarta -->
         <dependency>
             <groupId>org.glassfish.jersey.containers</groupId>
             <artifactId>jersey-container-servlet</artifactId>
             <version>2.41</version>
         </dependency>
 
-        <!-- Jersey HK2 -->
         <dependency>
             <groupId>org.glassfish.jersey.inject</groupId>
             <artifactId>jersey-hk2</artifactId>
             <version>2.41</version>
         </dependency>
 
-        <!-- Jackson JSON -->
         <dependency>
             <groupId>org.glassfish.jersey.media</groupId>
             <artifactId>jersey-media-json-jackson</artifactId>
             <version>2.41</version>
+        </dependency>
+
+        <!-- javax.ws.rs API -->
+        <dependency>
+            <groupId>javax.ws.rs</groupId>
+            <artifactId>javax.ws.rs-api</artifactId>
+            <version>2.1.1</version>
         </dependency>
     </dependencies>
 
@@ -44,6 +49,9 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
                 <version>3.3.2</version>
+                <configuration>
+                    <failOnMissingWebXml>false</failOnMissingWebXml>
+                </configuration>
             </plugin>
         </plugins>
     </build>
