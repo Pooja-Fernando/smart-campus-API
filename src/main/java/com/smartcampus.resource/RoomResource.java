@@ -1,4 +1,4 @@
-package com.smartcampus.resource;
+package com.smartcampus;
 
 import com.smartcampus.exception.RoomNotEmptyException;
 import com.smartcampus.model.Room;

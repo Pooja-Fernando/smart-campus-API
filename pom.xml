@@ -14,27 +14,30 @@
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
     </properties>
-
     <dependencies>
-        <!-- Jersey for Tomcat 10 / jakarta -->
-        <dependency>
-            <groupId>org.glassfish.jersey.containers</groupId>
-            <artifactId>jersey-container-servlet</artifactId>
-            <version>3.1.3</version>
-        </dependency>
+    <!-- Jersey servlet (JAX-RS) -->
+    <dependency>
+        <groupId>org.glassfish.jersey.containers</groupId>
+        <artifactId>jersey-container-servlet</artifactId>
+        <version>3.1.3</version>
+    </dependency>
 
-        <dependency>
-            <groupId>org.glassfish.jersey.inject</groupId>
-            <artifactId>jersey-hk2</artifactId>
-            <version>3.1.3</version>
-        </dependency>
+    <!-- Dependency injection -->
+    <dependency>
+        <groupId>org.glassfish.jersey.inject</groupId>
+        <artifactId>jersey-hk2</artifactId>
+        <version>3.1.3</version>
+    </dependency>
 
-        <dependency>
-            <groupId>org.glassfish.jersey.media</groupId>
-            <artifactId>jersey-media-json-jackson</artifactId>
-            <version>3.1.3</version>
-        </dependency>
-    </dependencies>
+    <!-- JSON support -->
+    <dependency>
+        <groupId>org.glassfish.jersey.media</groupId>
+        <artifactId>jersey-media-json-jackson</artifactId>
+        <version>3.1.3</version>
+    </dependency>
+</dependencies>
+
+    
 
     <build>
         <plugins>
